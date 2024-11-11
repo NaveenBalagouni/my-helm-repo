@@ -11,7 +11,7 @@ spec:
     path: my-helm-repo
   destination:
     server: https://kubernetes.default.svc
-    namespace: my-app-namespace
+    namespace: my-single-helm-repo
   syncPolicy:
     automated:
       prune: true
