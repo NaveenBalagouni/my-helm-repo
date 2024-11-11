@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: "https://NaveenBalagouni.github.io/my-helm-repo"
     targetRevision: main
-    path: charts/my-app
+    path: my-helm-repo
   destination:
     server: https://kubernetes.default.svc
     namespace: my-app-namespace
