@@ -7,11 +7,11 @@ spec:
   project: default
   source:
     repoURL: "https://NaveenBalagouni.github.io/my-helm-repo"
-    targetRevision: main
-    path: my-helm-repo
+    chart: "my-helm-repo"
+    targetRevision: "0.1.0"
   destination:
     server: https://kubernetes.default.svc
-    namespace: my-single-helm-repo
+    namespace: my-app-namespace
   syncPolicy:
     automated:
       prune: true
