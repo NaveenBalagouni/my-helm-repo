@@ -4,7 +4,7 @@ metadata:
   name: my-single-helm-repo-app
   namespace: default
 spec:
-  project: default
+  project: app-of-apps
   source:
     repoURL: "https://NaveenBalagouni.github.io/my-helm-repo"
     chart: "my-helm-repo"
