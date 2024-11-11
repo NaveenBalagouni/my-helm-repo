@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-single-helm-repo-app
+  namespace: default
+spec:
+  project: default
+  source:
+    repoURL: "https://NaveenBalagouni.github.io/my-helm-repo"
+    targetRevision: main
+    path: charts/my-app
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: my-app-namespace
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
