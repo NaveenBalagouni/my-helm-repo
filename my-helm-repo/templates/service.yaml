@@ -1,11 +1,17 @@
+# templates/service.yaml
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-helm-repo-svc
+  name: {{ include "my-helm-repo.fullname" . }}
+  labels:
+    app: {{ include "my-helm-repo.name" . }}
+    chart: {{ include "my-helm-repo.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
 spec:
-  selector:
-    app: my-app
+  type: ClusterIP
   ports:
-    - protocol: TCP
-      port: {{ .Values.service.port }}
-      targetPort: 80
+    - port: 80
+      targetPort: 8080
+  selector:
+    app: {{ include "my-helm-repo.name" . }}
