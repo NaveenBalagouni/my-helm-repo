@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  my-chart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-12-25T07:47:20.2948474+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 9d2af136cefd5dda41874aa065d6c39bbbef98d2731711532942bd91edc8fa8d
+    name: my-chart
+    type: application
+    urls:
+    - https://github.com/NaveenBalagouni/my-helm-repo/my-chart-0.2.0.tgz
+    version: 0.2.0
+generated: "2024-12-25T07:47:20.2900026+05:30"
